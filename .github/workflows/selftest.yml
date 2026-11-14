@@ -29,6 +29,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       MEMDOOR_CI: '1'   # our own test install: kept out of the download count (install.sh ?ci=1)
+      MEMDOOR_OWNER: '1'   # our own run: memdoor's version check says me=1, left out of make metrics
       MEMDOOR_ACTION_SITE: ${{ matrix.site }}
     steps:
       - uses: actions/checkout@v5

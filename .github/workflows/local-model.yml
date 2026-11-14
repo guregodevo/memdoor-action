@@ -21,6 +21,7 @@ jobs:
     timeout-minutes: 60
     env:
       MEMDOOR_CI: '1'
+      MEMDOOR_OWNER: '1'   # our own run: memdoor's version check says me=1, left out of make metrics
       MODEL: ${{ inputs.model || 'Qwen3-0.6B-4bit' }}
     steps:
       - uses: actions/checkout@v5
